@@ -1,0 +1,152 @@
+container {
+  display: flex;
+}
+.weather-app {
+  width: 75%;
+  min-width: 480px;
+  border: 1px solid #928f8f;
+  border-radius: 10px;
+  margin: 3em auto;
+}
+main {
+  margin: 3%;
+  width: 37%;
+}
+aside {
+  width: 55%;
+  border: 1px solid rgb(196, 195, 195);
+  border-radius: 6px;
+  padding: 3%;
+  padding-bottom: 0;
+  margin: 2%;
+  float: right;
+}
+
+header {
+  padding: 0.5em 0;
+}
+div.location {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+div.time {
+  text-align: center;
+  line-height: 3rem;
+}
+div.current-weather {
+  font-size: 4em;
+  padding-left: 8%;
+}
+div.country-date {
+  font-size: 1em;
+  padding-top: 2%;
+}
+h2.degree {
+  font-size: 6em;
+
+  padding: 0 10%;
+}
+p.highest-lowest {
+  font-size: 1.2em;
+  padding: 0 10%;
+}
+#city,
+#weather-description {
+  text-transform: capitalize;
+}
+div.conditions,
+div.upcoming-weather,
+div.precipitation {
+  box-shadow: 0 0 5px rgb(128, 128, 128);
+}
+ul {
+  list-style: none;
+  padding-right: 2rem;
+}
+li {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 2em;
+  text-align: center;
+}
+
+li.humidity,
+li.wind-speed,
+li.uv-index {
+  padding: 5% 2% 5% 0;
+}
+
+li.rain {
+  padding: 5% 0 5% 2%;
+}
+.units {
+  width: 100%;
+}
+div.degrees {
+  text-align: center;
+  padding-top: 6px;
+}
+
+form {
+  display: block;
+  position: relative;
+}
+input.form-control {
+  background-color: #ecebe4;
+  color: #383230;
+  text-align: center;
+  font-size: 1em;
+}
+#current-location {
+  border: 1px solid #ecebe4;
+  border-radius: 4px;
+  margin-top: 1px;
+  padding: 0.25em 1em;
+}
+#current-location:hover {
+  background-color: #cf8e55;
+  border-color: #ecebe4;
+}
+input.btn {
+  border-color: #ecebe4;
+  margin-top: 1px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+input.btn:hover {
+  background-color: #cf8e55;
+  border-color: #ecebe4;
+}
+p.today-weekly {
+  text-align: end;
+}
+div.precipitation {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+li.day-1,
+li.day-2,
+li.day-3,
+li.day-4,
+li.day-5 {
+  padding: 5% 4% 5% 0;
+  line-height: 2.5em;
+}
+li.day-6 {
+  padding: 5% 0;
+  line-height: 2.5em;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    font-size: 10px;
+  }
+}
+#github-link {
+  display: block;
+  text-align: center;
+}
