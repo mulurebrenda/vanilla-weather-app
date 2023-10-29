@@ -2,21 +2,21 @@ container {
   display: flex;
 }
 .weather-app {
-  width: 75%;
-  min-width: 480px;
+  width: 48em;
+  min-width: 45em;
   border: 1px solid #928f8f;
   border-radius: 10px;
-  margin: 3em auto;
+  margin: 2em auto;
 }
 main {
   margin: 3%;
-  width: 37%;
+  width: 35%;
 }
 aside {
-  width: 55%;
+  width: 58%;
   border: 1px solid rgb(196, 195, 195);
   border-radius: 6px;
-  padding: 3%;
+  padding: 5%;
   padding-bottom: 0;
   margin: 2%;
   float: right;
