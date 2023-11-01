@@ -29,19 +29,19 @@ let year = now.getFullYear();
 let fullDate = document.querySelector("#date");
 fullDate.innerHTML = `${month} ${date}, ${year}`;
 
-let apiKey = "05fo015e85414d77adb5a43ddt2314b8";
+let apiKey = "1615adaa703ba9f96a337d48232ad32d";
 function showTemperature(response) {
   console.log(response);
-debugger
+
   //rounding off the temperature
-  let temperature = Math.round(response.data.temperature.current);
+  let temperature = Math.round(response.data.main.temp);
   let temperatureMax = Math.round(response.data.main.temp_max);
   let temperatureMin = Math.round(response.data.main.temp_min);
- 
+
   let location = document.querySelector("#location");
-  location.innerHTML = `${response.data.city}`;
+  location.innerHTML = `${response.data.name}`;
   let city = document.querySelector("#city");
-  city.innerHTML = `${response.data.city}, ${response.data.country}`;
+  city.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = `${temperature}°`;
   let highestTemperature = document.querySelector("#highest-temp");
@@ -49,20 +49,19 @@ debugger
   let lowestTemperature = document.querySelector("#lowest-temp");
   lowestTemperature.innerHTML = `${temperatureMin}°`;
   let weatherDescription = document.querySelector("#weather-description");
-  weatherDescription.innerHTML = response.data.condition.description;
+  weatherDescription.innerHTML = response.data.weather[0].description;
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = `${response.data.temperature.humidity}%`;
+  humidity.innerHTML = `${response.data.main.humidity}%`;
   let windSpeed = document.querySelector("#wind-speed");
-  windSpeed.innerHTML = `${response.data.wind.speed}m/s`;
+  windSpeed.innerHTML = `${response.data.wind.speed}km/hr`;
 }
 
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input-text");
 
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchInput.value}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
-
