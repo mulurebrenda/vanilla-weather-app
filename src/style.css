@@ -64,46 +64,43 @@ p.highest-lowest {
 .conditions {
   width: 15em;
   padding: 1em;
-  gap: 1em; 
+  gap: 1em;
   display: flex;
- flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-.upcoming-weather{
-   width: 24em;
-   flex-basis: 21em;
+.upcoming-weather {
+  width: 24em;
+  flex-basis: 21em;
   padding: 1em;
-  gap: 1em; 
+  gap: 1em;
   display: flex;
- flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-.humidity, .wind-speed, .pressure, .rain{ 
+.humidity,
+.wind-speed,
+.pressure,
+.rain {
   flex-grow: 1;
-   padding: 0.2em;
+  padding: 0.2em;
   margin: 0.3em;
   font-size: 12px;
   line-height: 1.5em;
- text-align: center;
+  text-align: center;
 }
-.day-1, .day-2, .day-3, .day-4, .day-5, .day-6{
-  
+.day-1,
+.day-2,
+.day-3,
+.day-4,
+.day-5,
+.day-6,
+.day-7 {
   flex-grow: 1;
-   padding: 0.8em;
+  padding: 0.5em, 0.8em;
   margin: 0.3em;
-  font-size: 12px;
-  line-height: 2em;
- text-align: center;
-} 
-ul {
-  list-style: none;
-  padding-right: 2rem;
-}
-li {
-  display: inline-block;
   font-size: 12px;
   line-height: 2em;
   text-align: center;
 }
-
 .units {
   width: 100%;
 }
@@ -152,18 +149,6 @@ div.precipitation {
 img {
   display: block;
   margin: 0 auto;
-}
-li.day-1,
-li.day-2,
-li.day-3,
-li.day-4,
-li.day-5 {
-  padding: 5% 4% 5% 0;
-  line-height: 2.5em;
-}
-li.day-6 {
-  padding: 5% 0;
-  line-height: 2.5em;
 }
 @media screen and (max-width: 1200px) {
   .container {
