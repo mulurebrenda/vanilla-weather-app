@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -6,7 +6,7 @@
 .weather-app {
   width: 80%;
   flex-basis: 45em;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   box-shadow: 0 30px 50px rgba(135, 134, 138, 0.2);
   border: 1px solid rgba(135, 134, 138, 0.2);
   border-radius: 10px;
@@ -117,14 +117,7 @@ div.degrees {
   text-align: center;
   padding-top: 6px;
 }
-
-form {
-  display: block;
-  position: relative;
-}
-input.form-control {
-  background-color: #ecebe4;
-  color: #383230;
+input.search-form-input {
   text-align: center;
   font-size: 1em;
 }
@@ -139,17 +132,24 @@ input.form-control {
   border-color: #ecebe4;
 }
 input.btn {
-  border-color: #ecebe4;
-  margin-top: 1px;
-  padding-left: 3%;
-  padding-right: 3%;
+ background-color: rgb(161, 161, 161);
+ border: none;
+ text-align: center;
+ font-size: 1em;
 }
 input.btn:hover {
   background-color: #cf8e55;
-  border-color: #ecebe4;
 }
-p.today-weekly {
-  text-align: end;
+.units {
+  font-size: 1.2em;
+  text-align: center;
+  padding-top: 6px;  
+}
+#celsius, #farenheit{
+  text-decoration: none;
+}
+#celsius:hover, #farenheit:hover{
+  text-decoration: underline;
 }
 div.precipitation {
   padding: 10px;

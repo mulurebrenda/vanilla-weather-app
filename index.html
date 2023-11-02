@@ -41,38 +41,35 @@
           </div>
         </header>
         <aside>
-          <form class="search-form" id="search-form" role="search">
-            <div class="row">
-              <div class="col-6">
-                <input
-                  class="form-control shadow-sm"
-                  type="search"
-                  placeholder="Type a city"
-                  autofocus="on"
-                  autocomplete="off"
-                  id="search-input-text"
-                />
-              </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  value="Search"
-                  class="form-control btn btn-primary shadow-sm"
-                />
-              </div>
-              <div class="col-3 degrees">
-                <span class="units">
-                  <a id="celsius" href="#">°C </a>|
-                  <a id="farenheit" href="#">°F</a>
-                </span>
-              </div>
+          <div class="row">
+            <div class="col-9 form">
+              <form class="search-form" id="search-form" role="search">
+                <div class="row">
+                  <div class="col-7">
+                    <input
+                      class="form-control shadow-sm search-form-input"
+                      type="search"
+                      placeholder="Enter a city"
+                      autofocus="on"
+                      autocomplete="off"
+                      id="search-input-text"
+                    />
+                  </div>
+                  <div class="col-5">
+                    <input
+                      type="submit"
+                      value="Search"
+                      class="form-control btn btn-primary shadow-sm search-form-button"
+                    />
+                  </div>
+                </div>
+              </form>
             </div>
-          </form>
-          <br />
-          <p class="today-weekly">
-            <a href="#">Today</a>
-            | Weekly
-          </p>
+            <div class="col-3 units">
+              <a id="celsius" href="#">°C </a>|
+              <a id="farenheit" href="#">°F</a>
+            </div>
+          </div>
           <hr />
           <div class="precipitation">
             <h6>PRECIPITATION</h6>
@@ -84,7 +81,7 @@
           </div>
           <div class="upcoming-weather">
             <div class="day-1">
-              <strong> Friday </strong>
+              <strong id="day-1"> Friday </strong>
               <br />
               <span id="humidity-day1"> 💧 37% </span>
               <br />
@@ -92,7 +89,7 @@
               |<span id="min-temp-day1"> 14°</span>
             </div>
             <div class="day-2">
-              <strong> Saturday </strong>
+              <strong id="day-2"> Saturday </strong>
               <br />
               <span id="humidity-day2"> 💧 24% </span>
               <br />
@@ -100,7 +97,7 @@
               |<span id="min-temp-day2"> 14°</span>
             </div>
             <div class="day-3">
-              <strong> Sunday </strong>
+              <strong id="day-3"> Sunday </strong>
               <br />
               <span id="humidity-day3"> 💧 24% </span>
               <br />
@@ -108,7 +105,7 @@
               |<span id="min-temp-day3"> 15°</span>
             </div>
             <div class="day-4">
-              <strong> Monday </strong>
+              <strong id="day-4"> Monday </strong>
               <br />
               <span id="humidity-day4"> 💧 24% </span>
               <br />
@@ -116,7 +113,7 @@
               |<span id="min-temp-day4"> 14°</span>
             </div>
             <div class="day-5">
-              <strong> Tuesday </strong>
+              <strong id="day-5"> Tuesday </strong>
               <br />
               <span id="humidity-day5"> 💧 22% </span>
               <br />
@@ -124,7 +121,7 @@
               |<span id="min-temp-day5"> 15°</span>
             </div>
             <div class="day-6">
-              <strong> Wednesday </strong>
+              <strong id="day-6"> Wednesday </strong>
               <br />
               <span id="humidity-day6"> 💧 40% </span>
               <br />
@@ -132,7 +129,7 @@
               |<span id="min-temp-day6"> 15°</span>
             </div>
             <div class="day-7">
-              <strong> Thursday </strong>
+              <strong id="day-7"> Thursday </strong>
               <br />
               <span id="humidity-day7"> 💧 40% </span>
               <br />
