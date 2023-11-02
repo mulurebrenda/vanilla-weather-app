@@ -29,38 +29,50 @@ let year = now.getFullYear();
 let fullDate = document.querySelector("#date");
 fullDate.innerHTML = `${month} ${date}, ${year}`;
 
-let apiKey = "1615adaa703ba9f96a337d48232ad32d";
+let apiKey = "05fo015e85414d77adb5a43ddt2314b8";
 function showTemperature(response) {
   console.log(response);
 
   //rounding off the temperature
-  let temperature = Math.round(response.data.main.temp);
-  let temperatureMax = Math.round(response.data.main.temp_max);
-  let temperatureMin = Math.round(response.data.main.temp_min);
+  let temperature = Math.round(response.data.temperature.current);
+
+  //let temperatureMax = Math.round(response.data.main.temp_max);
+  //let temperatureMin = Math.round(response.data.main.temp_min);
 
   let location = document.querySelector("#location");
-  location.innerHTML = `${response.data.name}`;
+  location.innerHTML = `${response.data.city}`;
+  
+  let weatherIcon = document.querySelector("#weather-icon");
+  weatherIcon.innerHTML = `${response.data.condition.icon}`;
+  
   let city = document.querySelector("#city");
-  city.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
+  city.innerHTML = `${response.data.city}, ${response.data.country}`;
+  
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = `${temperature}°`;
-  let highestTemperature = document.querySelector("#highest-temp");
-  highestTemperature.innerHTML = `${temperatureMax}°`;
-  let lowestTemperature = document.querySelector("#lowest-temp");
-  lowestTemperature.innerHTML = `${temperatureMin}°`;
+  
+  //let highestTemperature = document.querySelector("#highest-temp");
+  //highestTemperature.innerHTML = `${temperatureMax}°`;
+  //let lowestTemperature = document.querySelector("#lowest-temp");
+  //lowestTemperature.innerHTML = `${temperatureMin}°`;
   let weatherDescription = document.querySelector("#weather-description");
-  weatherDescription.innerHTML = response.data.weather[0].description;
+  weatherDescription.innerHTML = response.data.condition.description;
+  
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = `${response.data.main.humidity}%`;
+  humidity.innerHTML = `${response.data.temperature.humidity}%`;
+  
   let windSpeed = document.querySelector("#wind-speed");
-  windSpeed.innerHTML = `${response.data.wind.speed}km/hr`;
+  windSpeed.innerHTML = `${response.data.wind.speed}m/s`;
+
+  let pressure = document.querySelector("#pressure");
+  pressure.innerHTML = `${response.data.temperature.pressure}hPa`;
 }
 
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input-text");
 
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchInput.value}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
 let form = document.querySelector("#search-form");

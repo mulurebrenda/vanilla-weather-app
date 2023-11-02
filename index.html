@@ -84,68 +84,55 @@
           </div>
 
           <div class="upcoming-weather">
-            <ul>
-              <li class="day-1">
-                <strong> FRI </strong>
+              <div class="day-1">
+                <strong> Friday </strong>
                 <br />
                 💧 37%
                 <br />
-                🌦 ☁
-                <br />
                 23°|14°
-              </li>
-              <li class="day-2">
-                <strong> SAT </strong>
+              </div>
+              <div class="day-2">
+                <strong> Saturday </strong>
                 <br />
                 💧 24%
-                <br />
-                ⛅ 🌙
                 <br />
                 24°|14°
-              </li>
-              <li class="day-3">
-                <strong> SUN </strong>
+              </div>
+              <div class="day-3">
+                <strong> Sunday </strong>
                 <br />
                 💧 24%
-                <br />
-                ⛅ 🌧
                 <br />
                 25°|15°
-              </li>
-              <li class="day-4">
-                <strong> MON </strong>
+              </div>
+              <div class="day-4">
+                <strong> Monday </strong>
                 <br />
                 💧 24%
                 <br />
-                ⛅ 🌙
-                <br />
                 24°|14°
-              </li>
-              <li class="day-5">
-                <strong> TUE </strong>
+              </div>
+              <div class="day-5">
+                <strong> Tuesday </strong>
                 <br />
                 💧 22%
                 <br />
-                ⛅ 🌧
-                <br />
                 25°|15°
-              </li>
-              <li class="day-6">
-                <strong> WED </strong>
+              </div>
+              <div class="day-6">
+                <strong> Wednesday </strong>
                 <br />
                 💧 40%
                 <br />
-                ⛅ 🌙
-                <br />
+            
                 24°|15°
-              </li>
-            </ul>
+              </div>
           </div>
         </aside>
         <main>
           <div class="row">
             <div class="col-4 current-weather">
-              <p>⛅</p>
+              <p id="weather-icon">⛅</p>
             </div>
             <div class="col-6 country-date">
               <span id="city">Nyeri, Kenya</span>
@@ -153,7 +140,6 @@
               <span id="date">September 20, 2023</span>
             </div>
           </div>
-          <br />
           <br />
           <br />
           <h2 class="degree" id="current-temperature">23°</h2>
@@ -167,36 +153,28 @@
           </p>
 
           <div class="conditions">
-            <ul>
-              <li class="humidity">
-                💧
-                <br />
-                <span id="humidity"></span>
-                <br />
-                <strong> Humidity </strong>
-              </li>
-              <li class="wind-speed">
-                💨
-                <br />
-                <span id="wind-speed"></span>
-                <br />
-                <strong> Wind speed </strong>
-              </li>
-              <li class="uv-index">
-                ☀
-                <br />
-                <span id="uv-index">High: 10</span>
-                <br />
-                <strong> UV index </strong>
-              </li>
-              <li class="rain">
-                ☔
-                <br />
-                <span id="rain"></span>
-                <br />
-                <strong> Rain </strong>
-              </li>
-            </ul>
+            <div class="humidity">
+              💧
+              <br />
+              <span id="humidity">37%</span>
+              <br />
+              <strong> Humidity </strong>
+            </div>
+            <div class="wind-speed">
+              💨
+              <br />
+              <span id="wind-speed">8m/s</span>
+              <br />
+              <strong> Wind speed </strong>
+            </div>
+            <div class="pressure">
+              ☀
+              <br />
+              <span id="pressure">1000hPa</span>
+              <br />
+              <strong> Pressure </strong>
+            </div>
+           
           </div>
         </main>
       </div>

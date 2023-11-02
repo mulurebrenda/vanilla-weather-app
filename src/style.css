@@ -1,9 +1,10 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
 }
 .weather-app {
   width: 80%;
-  min-width: 45em;
+  flex-basis: 45em;
   border: 1px solid #928f8f;
   border-radius: 10px;
   margin: 2em auto;
@@ -11,14 +12,14 @@
 main {
   margin: 3%;
   width: 35%;
+  flex-grow: 1;
 }
 aside {
   width: 58%;
   border: 1px solid rgb(196, 195, 195);
   border-radius: 6px;
-  padding: 5%;
-  padding-bottom: 0;
-  margin: 2%;
+  padding: 1em;
+  margin: 1em;
   float: right;
 }
 
@@ -55,11 +56,43 @@ p.highest-lowest {
 #weather-description {
   text-transform: capitalize;
 }
-div.conditions,
-div.upcoming-weather,
-div.precipitation {
+.conditions,
+.upcoming-weather,
+.precipitation {
   box-shadow: 0 0 5px rgb(128, 128, 128);
 }
+.conditions {
+  width: 15em;
+  padding: 1em;
+  gap: 1em; 
+  display: flex;
+ flex-wrap: wrap;
+}
+.upcoming-weather{
+   width: 24em;
+   flex-basis: 21em;
+  padding: 1em;
+  gap: 1em; 
+  display: flex;
+ flex-wrap: wrap;
+}
+.humidity, .wind-speed, .pressure, .rain{ 
+  flex-grow: 1;
+   padding: 0.2em;
+  margin: 0.3em;
+  font-size: 12px;
+  line-height: 1.5em;
+ text-align: center;
+}
+.day-1, .day-2, .day-3, .day-4, .day-5, .day-6{
+  
+  flex-grow: 1;
+   padding: 0.8em;
+  margin: 0.3em;
+  font-size: 12px;
+  line-height: 2em;
+ text-align: center;
+} 
 ul {
   list-style: none;
   padding-right: 2rem;
@@ -71,15 +104,6 @@ li {
   text-align: center;
 }
 
-li.humidity,
-li.wind-speed,
-li.uv-index {
-  padding: 5% 2% 5% 0;
-}
-
-li.rain {
-  padding: 5% 0 5% 2%;
-}
 .units {
   width: 100%;
 }
