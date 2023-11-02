@@ -26,30 +26,36 @@ aside {
 header {
   padding: 0.5em 0;
 }
-div.location {
+#location {
+  font-weight: 400;
+  margin: 5%;
   text-align: center;
-  font-size: 3rem;
   text-transform: capitalize;
 }
 div.time {
   text-align: center;
   line-height: 3rem;
 }
-div.current-weather {
-  font-size: 4em;
-  padding-left: 8%;
+#weather-icon {
+  width: 7em;
 }
 div.country-date {
+  padding-top: 1.8em;
+  padding-left: 2em;
+}
+#city {
   font-size: 1em;
-  padding-top: 2%;
+}
+#date {
+  font-size: 0.9em;
 }
 h2.degree {
-  font-size: 6em;
+  font-size: 5em;
 
   padding: 0 10%;
 }
-p.highest-lowest {
-  font-size: 1.2em;
+p.highest-lowest-temp {
+  font-size: 1em;
   padding: 0 10%;
 }
 #city,

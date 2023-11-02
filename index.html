@@ -82,7 +82,6 @@
               width="90%"
             />
           </div>
-
           <div class="upcoming-weather">
             <div class="day-1">
               <strong> Friday </strong>
@@ -145,9 +144,16 @@
         <main>
           <div class="row">
             <div class="col-4 current-weather">
-              <p id="weather-icon">⛅</p>
+              <p id="icon">
+                <img
+                  id="weather-icon"
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+                  alt="Weather Icon"
+                  width="65px"
+                />
+              </p>
             </div>
-            <div class="col-6 country-date">
+            <div class="col-8 country-date">
               <span id="city">Nyeri, Kenya</span>
               <br />
               <span id="date">September 20, 2023</span>
@@ -156,13 +162,12 @@
           <br />
           <br />
           <h2 class="degree" id="current-temperature">23°</h2>
-          <p class="highest-lowest">
-            <span id="highest-lowest-temp">
-              <span id="highest-temp">25°</span>|
-              <span id="lowest-temp">14°</span>
-            </span>
+          <p class="highest-lowest-temp">
+            <span id="highest-temp">25°</span>|
+            <span id="lowest-temp">14°</span>
+
             <br />
-            <span id="weather-description"> Partly Cloudy </span>
+            <span id="weather-description"> Light Rain </span>
           </p>
 
           <div class="conditions">

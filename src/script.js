@@ -43,8 +43,9 @@ function showTemperature(response) {
   let location = document.querySelector("#location");
   location.innerHTML = `${response.data.city}`;
 
-  let weatherIcon = document.querySelector("#weather-icon");
-  weatherIcon.innerHTML = `${response.data.condition.icon}`;
+  //using weather icon
+  var iconUrl = `${response.data.condition.icon_url}`;
+  document.querySelector("#weather-icon").src = iconUrl;
 
   let city = document.querySelector("#city");
   city.innerHTML = `${response.data.city}, ${response.data.country}`;
