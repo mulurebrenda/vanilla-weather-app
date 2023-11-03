@@ -4,10 +4,10 @@
   flex-wrap: wrap;
 }
 .weather-app {
-  width: 80%;
+  width: 85%;
   flex-basis: 45em;
   font-family: "Nunito", sans-serif;
-  box-shadow: 0 30px 50px rgba(135, 134, 138, 0.2);
+  box-shadow: 0 10px 20px rgba(135, 134, 138, 0.2);
   border: 1px solid rgba(135, 134, 138, 0.2);
   border-radius: 10px;
   margin: 2em auto;
@@ -18,8 +18,9 @@ main {
   flex-grow: 1;
 }
 aside {
+  background: rgba(196, 195, 195, 0.08);
   width: 58%;
-  border: 1px solid rgb(196, 195, 195);
+  border: 1px solid rgba(196, 195, 195, 0.1);
   border-radius: 6px;
   padding: 1em;
   margin: 1em;
@@ -39,7 +40,9 @@ div.time {
   text-align: center;
   line-height: 3rem;
 }
-#weather-icon {
+#weather-icon { 
+  display: block;
+  margin: 0 auto;
   width: 7em;
 }
 div.country-date {
@@ -66,22 +69,31 @@ p.highest-lowest-temp {
   text-transform: capitalize;
 }
 .conditions,
-.upcoming-weather,
-.precipitation {
-  box-shadow: 0 0 5px rgb(128, 128, 128);
+.day-1,
+.day-2,
+.day-3,
+.day-4,
+.day-5,
+.day-6,
+.day-7 {
+  
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.4);
 }
 .conditions {
-  width: 15em;
+  background: #ffffff;
+  width: 24em;
   padding: 1em;
+  margin: 2em 1em 1em 0.2em;
   gap: 1em;
   display: flex;
   flex-wrap: wrap;
 }
 .upcoming-weather {
-  width: 24em;
+  width: 46em;
   flex-basis: 21em;
   padding: 1em;
-  gap: 1em;
+  
   display: flex;
   flex-wrap: wrap;
 }
@@ -103,15 +115,14 @@ p.highest-lowest-temp {
 .day-5,
 .day-6,
 .day-7 {
+  background-color: rgba(196, 195, 195, 0.02);
   flex-grow: 1;
-  padding: 0.5em, 0.8em;
+  padding: 0.5em, 0.6em;
   margin: 0.3em;
   font-size: 12px;
   line-height: 2em;
   text-align: center;
-}
-.units {
-  width: 100%;
+  
 }
 div.degrees {
   text-align: center;
@@ -134,33 +145,38 @@ input.search-form-input {
 button.btn {
   background-color: rgb(161, 161, 161);
   border: none;
+  border-radius: 6px;
   text-align: center;
   font-size: 1em;
+  transition: ease-in-out 200ms all;
 }
 button.btn:hover {
   background-color: #cf8e55;
+  font-size: 1.05em;
 }
-.units {
+div.units {
   font-size: 1.2em;
   text-align: center;
-  padding-top: 6px;
+  padding: 4px 3px 0;
+  border: 0.4px solid rgb(189, 188, 188);
+  border-radius: 16px;
+  width: 20%;
 }
 #celsius,
 #farenheit {
   text-decoration: none;
+  border: none;
+  padding: 0;
+  background: rgba(196, 195, 195, 0.02);
+  transition: ease-in-out 200ms all;
 }
 #celsius:hover,
 #farenheit:hover {
-  text-decoration: underline;
+  font-size: 0.9em;
+  color: blue;
 }
-div.precipitation {
-  padding: 10px;
-  margin-bottom: 10px;
-}
-img {
-  display: block;
-  margin: 0 auto;
-}
+
+
 @media screen and (max-width: 1200px) {
   .container {
     font-size: 10px;

@@ -42,9 +42,9 @@
         </header>
         <aside>
           <div class="row">
-            <div class="col-9 form">
+            <div class="col-9 searchform-current">
               <div class="row">
-                <div class="col-7">
+                <div class="col-7 form">
                   <form class="search-form" id="search-form" role="search">
                     <input
                       class="form-control shadow-sm search-form-input"
@@ -57,9 +57,9 @@
                   </form>
                 </div>
 
-                <div class="col-5">
+                <div class="col-5 current-location-button">
                   <button
-                    class="btn btn-primary shadow-sm current-location-button"
+                    class="btn btn-primary shadow-sm"
                     onclick="navigate()"
                   >
                     Current
@@ -68,107 +68,14 @@
               </div>
             </div>
             <div class="col-3 units">
-              <a id="celsius" href="#">°C </a>|
-              <a id="farenheit" href="#">°F</a>
+              <button id="celsius" >
+                °C
+              </button>
+              <span> |</span>
+              <button id="farenheit" onclick="convert()">°F</button>
             </div>
           </div>
           <hr />
-          <div class="precipitation">
-            <h6>PRECIPITATION</h6>
-            <img
-              src="media/precipitation.jpg"
-              alt="precipitation chart"
-              width="90%"
-            />
-          </div>
-          <div class="upcoming-weather">
-            <div class="day-1">
-              <strong id="day-1"> Friday </strong>
-              <br />
-              <span id="humidity-day1"> 💧 37% </span>
-              <br />
-              <span id="max-temp-day1">23°</span>
-              |<span id="min-temp-day1"> 14°</span>
-            </div>
-            <div class="day-2">
-              <strong id="day-2"> Saturday </strong>
-              <br />
-              <span id="humidity-day2"> 💧 24% </span>
-              <br />
-              <span id="max-temp-day2">24°</span>
-              |<span id="min-temp-day2"> 14°</span>
-            </div>
-            <div class="day-3">
-              <strong id="day-3"> Sunday </strong>
-              <br />
-              <span id="humidity-day3"> 💧 24% </span>
-              <br />
-              <span id="max-temp-day3">25°</span>
-              |<span id="min-temp-day3"> 15°</span>
-            </div>
-            <div class="day-4">
-              <strong id="day-4"> Monday </strong>
-              <br />
-              <span id="humidity-day4"> 💧 24% </span>
-              <br />
-              <span id="max-temp-day4">24°</span>
-              |<span id="min-temp-day4"> 14°</span>
-            </div>
-            <div class="day-5">
-              <strong id="day-5"> Tuesday </strong>
-              <br />
-              <span id="humidity-day5"> 💧 22% </span>
-              <br />
-              <span id="max-temp-day5">25°</span>
-              |<span id="min-temp-day5"> 15°</span>
-            </div>
-            <div class="day-6">
-              <strong id="day-6"> Wednesday </strong>
-              <br />
-              <span id="humidity-day6"> 💧 40% </span>
-              <br />
-              <span id="max-temp-day6">24°</span>
-              |<span id="min-temp-day6"> 15°</span>
-            </div>
-            <div class="day-7">
-              <strong id="day-7"> Thursday </strong>
-              <br />
-              <span id="humidity-day7"> 💧 40% </span>
-              <br />
-              <span id="max-temp-day7">24°</span>
-              |<span id="min-temp-day7"> 15°</span>
-            </div>
-          </div>
-        </aside>
-        <main>
-          <div class="row">
-            <div class="col-4 current-weather">
-              <p id="icon">
-                <img
-                  id="weather-icon"
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
-                  alt="Weather Icon"
-                  width="65px"
-                />
-              </p>
-            </div>
-            <div class="col-8 country-date">
-              <span id="city">Nyeri, Kenya</span>
-              <br />
-              <span id="date">September 20, 2023</span>
-            </div>
-          </div>
-          <br />
-          <br />
-          <h2 class="degree" id="current-temperature">23°</h2>
-          <p class="highest-lowest-temp">
-            <span id="highest-temp">25°</span>|
-            <span id="lowest-temp">14°</span>
-
-            <br />
-            <span id="weather-description"> Light Rain </span>
-          </p>
-
           <div class="conditions">
             <div class="humidity">
               💧
@@ -192,7 +99,92 @@
               <strong> Pressure </strong>
             </div>
           </div>
+        </aside>
+        <main>
+          <div class="row">
+            <div class="col-4 current-weather">
+              <p id="icon">
+                <img
+                  id="weather-icon"
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+                  alt="Weather Icon"
+                  width="65px"
+                />
+              </p>
+            </div>
+            <div class="col-8 country-date">
+              <span id="city">Nyeri, Kenya</span>
+              <br />
+              <span id="date">September 20, 2023</span>
+            </div>
+          </div>
+          <h2 class="degree" id="current-temperature">23°</h2>
+          <p class="highest-lowest-temp">
+            <span id="highest-temp">25°</span>|
+            <span id="lowest-temp">14°</span>
+
+            <br />
+            <span id="weather-description"> Light Rain </span>
+          </p>
         </main>
+        <div class="upcoming-weather">
+          <div class="day-1">
+            <strong id="day-1"> Friday </strong>
+            <br />
+            <span id="humidity-day1"> 💧 37% </span>
+            <br />
+            <span id="max-temp-day1">23°</span>
+            |<span id="min-temp-day1"> 14°</span>
+          </div>
+          <div class="day-2">
+            <strong id="day-2"> Saturday </strong>
+            <br />
+            <span id="humidity-day2"> 💧 24% </span>
+            <br />
+            <span id="max-temp-day2">24°</span>
+            |<span id="min-temp-day2"> 14°</span>
+          </div>
+          <div class="day-3">
+            <strong id="day-3"> Sunday </strong>
+            <br />
+            <span id="humidity-day3"> 💧 24% </span>
+            <br />
+            <span id="max-temp-day3">25°</span>
+            |<span id="min-temp-day3"> 15°</span>
+          </div>
+          <div class="day-4">
+            <strong id="day-4"> Monday </strong>
+            <br />
+            <span id="humidity-day4"> 💧 24% </span>
+            <br />
+            <span id="max-temp-day4">24°</span>
+            |<span id="min-temp-day4"> 14°</span>
+          </div>
+          <div class="day-5">
+            <strong id="day-5"> Tuesday </strong>
+            <br />
+            <span id="humidity-day5"> 💧 22% </span>
+            <br />
+            <span id="max-temp-day5">25°</span>
+            |<span id="min-temp-day5"> 15°</span>
+          </div>
+          <div class="day-6">
+            <strong id="day-6"> Wednesday </strong>
+            <br />
+            <span id="humidity-day6"> 💧 40% </span>
+            <br />
+            <span id="max-temp-day6">24°</span>
+            |<span id="min-temp-day6"> 15°</span>
+          </div>
+          <div class="day-7">
+            <strong id="day-7"> Thursday </strong>
+            <br />
+            <span id="humidity-day7"> 💧 40% </span>
+            <br />
+            <span id="max-temp-day7">24°</span>
+            |<span id="min-temp-day7"> 15°</span>
+          </div>
+        </div>
       </div>
     </div>
     <p id="github-link">

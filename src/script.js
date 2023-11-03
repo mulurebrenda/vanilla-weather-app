@@ -30,6 +30,9 @@ let fullDate = document.querySelector("#date");
 fullDate.innerHTML = `${month} ${date}, ${year}`;
 
 let apiKey = "05fo015e85414d77adb5a43ddt2314b8";
+
+
+
 //current weather
 function showTemperature(response) {
   console.log(response);
@@ -44,7 +47,7 @@ function showTemperature(response) {
   location.innerHTML = `${response.data.city}`;
 
   //using weather icon
-  var iconUrl = `${response.data.condition.icon_url}`;
+  let iconUrl = `${response.data.condition.icon_url}`;
   document.querySelector("#weather-icon").src = iconUrl;
 
   let city = document.querySelector("#city");
@@ -53,6 +56,16 @@ function showTemperature(response) {
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = `${temperature}°`;
 
+  var units = response.flags.units;
+
+  $("#farenheit").on("click", function () {
+    
+      $currentTemperature.html("");
+      var farenheit = Math.round((temperature * 1.8) + 32);
+      $currentTemperature.append(`${farenheit}°`);
+      units = "si";
+    
+  }); 
   //let highestTemperature = document.querySelector("#highest-temp");
   //highestTemperature.innerHTML = `${temperatureMax}°`;
   //let lowestTemperature = document.querySelector("#lowest-temp");
@@ -154,12 +167,12 @@ function forecast(event) {
   axios.get(apiurl).then(showForecast);
 }
 let searchForm = document.querySelector("#search-form");
-form.addEventListener("submit", forecast);
+searchForm.addEventListener("submit", forecast);
 
 //getting weather for current location
 function showPosition(position) {
   console.log(position);
-  
+
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let forecastUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${lat}&lon=${lon}&units=metric&key=${apiKey}`;
@@ -170,4 +183,9 @@ function showPosition(position) {
 function navigate() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
+
+//unit conversion
+let celsius = document.getElementById("celsius");
+celsius.addEventListener("click", showTemperature);
+
 
