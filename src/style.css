@@ -4,7 +4,8 @@
   flex-wrap: wrap;
 }
 .weather-app {
-  width: 100%;
+  width: 85%;
+  max-width: 770px;
  min-width: 480px;
   font-family: "Nunito", sans-serif;
   box-shadow: 0 10px 20px rgba(135, 134, 138, 0.2);
@@ -82,7 +83,7 @@ p.highest-lowest-temp {
 }
 .conditions {
   background: #ffffff;
-  width: 24em;
+  width: 100%;
   padding: 1em;
   margin: 2em 1em 1em 0.2em;
   gap: 1em;
@@ -90,7 +91,7 @@ p.highest-lowest-temp {
   flex-wrap: wrap;
 }
 .upcoming-weather {
-  width: 46em;
+  width: 100%;
   flex-basis: 21em;
   padding: 1em;
   
@@ -117,8 +118,9 @@ p.highest-lowest-temp {
 .day-7 {
   background-color: rgba(196, 195, 195, 0.02);
   flex-grow: 1;
-  padding: 0.5em, 0.6em;
-  margin: 0.3em;
+  padding: 0.5em, 0.8em;
+  margin: 0 0.5em 0.5em;
+  gap: 2em;
   font-size: 12px;
   line-height: 2em;
   text-align: center;
