@@ -4,7 +4,7 @@
   flex-wrap: wrap;
 }
 .weather-app {
-  width: 85%;
+  width: 100%;
   flex-basis: 45em;
   font-family: "Nunito", sans-serif;
   box-shadow: 0 10px 20px rgba(135, 134, 138, 0.2);
