@@ -43,9 +43,9 @@
         <aside>
           <div class="row">
             <div class="col-9 form">
-              <form class="search-form" id="search-form" role="search">
-                <div class="row">
-                  <div class="col-7">
+              <div class="row">
+                <div class="col-7">
+                  <form class="search-form" id="search-form" role="search">
                     <input
                       class="form-control shadow-sm search-form-input"
                       type="search"
@@ -54,16 +54,18 @@
                       autocomplete="off"
                       id="search-input-text"
                     />
-                  </div>
-                  <div class="col-5">
-                    <input
-                      type="submit"
-                      value="Search"
-                      class="form-control btn btn-primary shadow-sm search-form-button"
-                    />
-                  </div>
+                  </form>
                 </div>
-              </form>
+
+                <div class="col-5">
+                  <button
+                    class="btn btn-primary shadow-sm current-location-button"
+                    onclick="navigate()"
+                  >
+                    Current
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="col-3 units">
               <a id="celsius" href="#">°C </a>|

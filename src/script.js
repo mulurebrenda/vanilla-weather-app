@@ -155,3 +155,19 @@ function forecast(event) {
 }
 let searchForm = document.querySelector("#search-form");
 form.addEventListener("submit", forecast);
+
+//getting weather for current location
+function showPosition(position) {
+  console.log(position);
+  
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let forecastUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${lat}&lon=${lon}&units=metric&key=${apiKey}`;
+  let url = `https://api.shecodes.io/weather/v1/current?lat=${lat}&lon=${lon}&units=metric&key=${apiKey}`;
+  axios.get(url).then(showTemperature);
+  axios.get(forecastUrl).then(showForecast);
+}
+function navigate() {
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+

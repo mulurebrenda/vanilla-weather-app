@@ -131,24 +131,26 @@ input.search-form-input {
   background-color: #cf8e55;
   border-color: #ecebe4;
 }
-input.btn {
- background-color: rgb(161, 161, 161);
- border: none;
- text-align: center;
- font-size: 1em;
+button.btn {
+  background-color: rgb(161, 161, 161);
+  border: none;
+  text-align: center;
+  font-size: 1em;
 }
-input.btn:hover {
+button.btn:hover {
   background-color: #cf8e55;
 }
 .units {
   font-size: 1.2em;
   text-align: center;
-  padding-top: 6px;  
+  padding-top: 6px;
 }
-#celsius, #farenheit{
+#celsius,
+#farenheit {
   text-decoration: none;
 }
-#celsius:hover, #farenheit:hover{
+#celsius:hover,
+#farenheit:hover {
   text-decoration: underline;
 }
 div.precipitation {
