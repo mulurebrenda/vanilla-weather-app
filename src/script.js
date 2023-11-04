@@ -54,6 +54,7 @@ function showTemperature(response) {
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = `${temperature}°`;
 
+  //unit conversion from celsius to farenheit
   let celsiusButton = document.getElementById("celsius");
   let originalTemperature = document.getElementById("current-temperature");
   celsiusButton.addEventListener("click", function () {
