@@ -57,14 +57,15 @@ function showTemperature(response) {
   let celsiusButton = document.getElementById("celsius");
   let originalTemperature = document.getElementById("current-temperature");
   celsiusButton.addEventListener("click", function () {
-    originalTemperature.innerHTML = `${temperature}`;
+    originalTemperature.innerHTML = `${temperature}°`;
   });
 
   let farenheitButton = document.getElementById("farenheit");
   let convertedTemperature = document.getElementById("current-temperature");
   farenheitButton.addEventListener("click", function () {
-    let farenheit = temperature * 1.8 + 32;
-    convertedTemperature.innerHTML = `${farenheit}`;
+    let farenheitConversion = temperature * 1.8 + 32;
+    let farenheit = Math.round(farenheitConversion);
+    convertedTemperature.innerHTML = `${farenheit}°`;
   });
 
   //let highestTemperature = document.querySelector("#highest-temp");
