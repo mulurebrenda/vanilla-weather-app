@@ -2,11 +2,12 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 5em;
 }
 .weather-app {
   width: 85%;
   max-width: 770px;
- min-width: 480px;
+  min-width: 480px;
   font-family: "Nunito", sans-serif;
   box-shadow: 0 10px 20px rgba(135, 134, 138, 0.2);
   border: 1px solid rgba(135, 134, 138, 0.2);
@@ -19,12 +20,12 @@ main {
   flex-grow: 1;
 }
 aside {
-  background: rgba(196, 195, 195, 0.08);
+  background: rgba(196, 195, 195, 0.15);
   width: 58%;
   border: 1px solid rgba(196, 195, 195, 0.1);
   border-radius: 6px;
   padding: 1em;
-  margin: 1em;
+  margin: 2em 1em 1em;
   float: right;
 }
 
@@ -41,7 +42,7 @@ div.time {
   text-align: center;
   line-height: 3rem;
 }
-#weather-icon { 
+#weather-icon {
   display: block;
   margin: 0 auto;
   width: 7em;
@@ -77,7 +78,6 @@ p.highest-lowest-temp {
 .day-5,
 .day-6,
 .day-7 {
-  
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(128, 128, 128, 0.4);
 }
@@ -94,7 +94,7 @@ p.highest-lowest-temp {
   width: 100%;
   flex-basis: 21em;
   padding: 1em;
-  
+
   display: flex;
   flex-wrap: wrap;
 }
@@ -105,7 +105,7 @@ p.highest-lowest-temp {
   flex-grow: 1;
   padding: 0.2em;
   margin: 0.3em;
-  font-size: 12px;
+  font-size: 1.02em;
   line-height: 1.5em;
   text-align: center;
 }
@@ -120,11 +120,9 @@ p.highest-lowest-temp {
   flex-grow: 1;
   padding: 0.5em, 0.8em;
   margin: 0 0.5em 0.5em;
-  gap: 2em;
-  font-size: 12px;
+  font-size: 1.02em;
   line-height: 2em;
   text-align: center;
-  
 }
 div.degrees {
   text-align: center;
@@ -134,27 +132,20 @@ input.search-form-input {
   text-align: center;
   font-size: 1em;
 }
-#current-location {
-  border: 1px solid #ecebe4;
-  border-radius: 4px;
-  margin-top: 1px;
-  padding: 0.25em 1em;
-}
-#current-location:hover {
-  background-color: #cf8e55;
-  border-color: #ecebe4;
-}
-button.btn {
+
+button.current-location-button {
   background-color: rgb(161, 161, 161);
   border: none;
+
   border-radius: 6px;
   text-align: center;
   font-size: 1em;
   transition: ease-in-out 200ms all;
 }
-button.btn:hover {
+button.current-location-button:hover {
   background-color: #cf8e55;
   font-size: 1.05em;
+  padding: 6.5px 12px;
 }
 div.units {
   font-size: 1.2em;
@@ -168,6 +159,7 @@ div.units {
 #farenheit {
   text-decoration: none;
   border: none;
+  
   padding: 0;
   background: rgba(196, 195, 195, 0.02);
   transition: ease-in-out 200ms all;
@@ -177,7 +169,6 @@ div.units {
   font-size: 0.9em;
   color: blue;
 }
-
 
 @media screen and (max-width: 1200px) {
   .container {

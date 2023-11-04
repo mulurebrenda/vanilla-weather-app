@@ -31,8 +31,6 @@ fullDate.innerHTML = `${month} ${date}, ${year}`;
 
 let apiKey = "05fo015e85414d77adb5a43ddt2314b8";
 
-
-
 //current weather
 function showTemperature(response) {
   console.log(response);
@@ -56,16 +54,19 @@ function showTemperature(response) {
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = `${temperature}°`;
 
-  var units = response.flags.units;
+  let celsiusButton = document.getElementById("celsius");
+  let originalTemperature = document.getElementById("current-temperature");
+  celsiusButton.addEventListener("click", function () {
+    originalTemperature.innerHTML = `${temperature}`;
+  });
 
-  $("#farenheit").on("click", function () {
-    
-      $currentTemperature.html("");
-      var farenheit = Math.round((temperature * 1.8) + 32);
-      $currentTemperature.append(`${farenheit}°`);
-      units = "si";
-    
-  }); 
+  let farenheitButton = document.getElementById("farenheit");
+  let convertedTemperature = document.getElementById("current-temperature");
+  farenheitButton.addEventListener("click", function () {
+    let farenheit = temperature * 1.8 + 32;
+    convertedTemperature.innerHTML = `${farenheit}`;
+  });
+
   //let highestTemperature = document.querySelector("#highest-temp");
   //highestTemperature.innerHTML = `${temperatureMax}°`;
   //let lowestTemperature = document.querySelector("#lowest-temp");
@@ -187,5 +188,3 @@ function navigate() {
 //unit conversion
 let celsius = document.getElementById("celsius");
 celsius.addEventListener("click", showTemperature);
-
-
