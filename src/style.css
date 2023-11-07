@@ -9,7 +9,7 @@
 .weather-app {
   width: 85%;
   max-width: 620px;
-  min-width: 480px;
+  min-width: 420px;
   font-family: "Nunito", sans-serif;
   box-shadow: 0 10px 20px rgba(135, 134, 138, 0.2);
   border: 1px solid rgba(135, 134, 138, 0.2);
