@@ -3,16 +3,17 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 5em;
+  justify-content: center;
+ 
 }
 .weather-app {
   width: 85%;
-  max-width: 770px;
+  max-width: 620px;
   min-width: 480px;
   font-family: "Nunito", sans-serif;
   box-shadow: 0 10px 20px rgba(135, 134, 138, 0.2);
   border: 1px solid rgba(135, 134, 138, 0.2);
-  border-radius: 10px;
-  margin: 2em auto;
+  border-radius: 10px; height: 60%;
 }
 main {
   margin: 3%;
@@ -32,8 +33,17 @@ aside {
 header {
   padding: 0.5em 0;
 }
+button.navbar-toggler {
+  border: none;
+  font-size: 1.5em;
+}
+button.navbar-toggler:hover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.4em;
+}
 #location {
-  font-weight: 400;
+  font-size: 2.2em;
+  font-weight: 550;
   margin: 5%;
   text-align: center;
   text-transform: capitalize;
@@ -52,10 +62,12 @@ div.country-date {
   padding-left: 2em;
 }
 #city {
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 #date {
-  font-size: 0.9em;
+  font-size: 0.95em;
+  font-weight: 500;
 }
 h2.degree {
   font-size: 5em;
@@ -77,7 +89,8 @@ p.highest-lowest-temp {
 .day-4,
 .day-5,
 .day-6,
-.day-7 {
+.day-7,
+.forecast-day{
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(128, 128, 128, 0.4);
 }
@@ -92,11 +105,12 @@ p.highest-lowest-temp {
 }
 .upcoming-weather {
   width: 100%;
-  flex-basis: 21em;
+
   padding: 1em;
 
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .humidity,
 .wind-speed,
@@ -115,7 +129,9 @@ p.highest-lowest-temp {
 .day-4,
 .day-5,
 .day-6,
-.day-7 {
+.day-7,
+.forecast-day
+{
   background-color: rgba(196, 195, 195, 0.02);
   flex-grow: 1;
   padding: 0.5em, 0.8em;
@@ -123,6 +139,16 @@ p.highest-lowest-temp {
   font-size: 1.02em;
   line-height: 2em;
   text-align: center;
+}
+#weather-icon-day1,
+#weather-icon-day2,
+#weather-icon-day3,
+#weather-icon-day4,
+#weather-icon-day5,
+#weather-icon-day6,
+#weather-icon-day7,
+.weather-forecast-icon {
+  width: 5em;
 }
 div.degrees {
   text-align: center;
@@ -159,7 +185,7 @@ div.units {
 #farenheit {
   text-decoration: none;
   border: none;
-  
+
   padding: 0;
   background: rgba(196, 195, 195, 0.02);
   transition: ease-in-out 200ms all;
@@ -170,9 +196,9 @@ div.units {
   color: blue;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
   .container {
-    font-size: 10px;
+    font-size: 0.62em;
   }
 }
 #github-link {
