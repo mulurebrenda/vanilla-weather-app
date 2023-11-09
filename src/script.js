@@ -97,7 +97,7 @@ function showForecast(response) {
 
   let forecastHTML = "";
   response.data.daily.forEach(function (day, index) {
-    if (index < 6) {
+    if (index > 0) {
       forecastHTML =
         forecastHTML +
         `
