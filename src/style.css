@@ -8,7 +8,7 @@
 .weather-app {
   width: 85%;
   max-width: 620px;
-  min-width: 450px;
+  min-width: 386px;
   font-family: "Nunito", sans-serif;
   box-shadow: 0 10px 20px rgba(135, 134, 138, 0.2);
   border: 1px solid rgba(135, 134, 138, 0.2);
@@ -54,7 +54,7 @@ div.time {
 #weather-icon {
   display: block;
   margin: 0 auto;
-  width: 7em;
+  width: 6em;
 }
 div.country-date {
   padding-top: 1.8em;
