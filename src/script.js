@@ -33,11 +33,8 @@ let apiKey = "05fo015e85414d77adb5a43ddt2314b8";
 
 //current weather
 function showTemperature(response) {
-  console.log(response);
-
   //rounding off the temperature
   let temperature = Math.round(response.data.temperature.current);
-
 
   let location = document.querySelector("#location");
   location.innerHTML = `${response.data.city}`;
@@ -46,8 +43,8 @@ function showTemperature(response) {
   let iconUrl = `${response.data.condition.icon_url}`;
   document.querySelector("#weather-icon").src = iconUrl;
 
-  let city = document.querySelector("#city");
-  city.innerHTML = `${response.data.city}, ${response.data.country}`;
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = `${response.data.city}, ${response.data.country}`;
 
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = `${temperature}°`;
@@ -67,7 +64,6 @@ function showTemperature(response) {
     convertedTemperature.innerHTML = `${farenheit}°`;
   });
 
-  
   let weatherDescription = document.querySelector("#weather-description");
   weatherDescription.innerHTML = response.data.condition.description;
 
@@ -79,7 +75,11 @@ function showTemperature(response) {
 
   let pressure = document.querySelector("#pressure");
   pressure.innerHTML = `${response.data.temperature.pressure} hPa`;
+
+  forecast(response.data.city);
 }
+
+//function to format the day from the timestamp
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -88,22 +88,18 @@ function formatDay(timestamp) {
 }
 //weather forecast
 function showForecast(response) {
-  console.log(response);
-
-
   let temperatureMax = Math.round(response.data.daily[0].temperature.maximum);
   let temperatureMin = Math.round(response.data.daily[0].temperature.minimum);
-let highestTemperature = document.querySelector("#highest-temp");
-highestTemperature.innerHTML = `${temperatureMax}°`;
-let lowestTemperature = document.querySelector("#lowest-temp");
-lowestTemperature.innerHTML = `${temperatureMin}°`;
+  let highestTemperature = document.querySelector("#highest-temp");
+  highestTemperature.innerHTML = `${temperatureMax}°`;
+  let lowestTemperature = document.querySelector("#lowest-temp");
+  lowestTemperature.innerHTML = `${temperatureMin}°`;
 
   let forecastHTML = "";
-  response.data.daily.forEach(function (day, index) {
-    if (index < 7) {
-      forecastHTML =
-        forecastHTML +
-        `
+  response.data.daily.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
        <div class="forecast-day">
          <div class="forecast-date">
            <strong>
@@ -124,29 +120,28 @@ lowestTemperature.innerHTML = `${temperatureMin}°`;
         </div>
       </div>
       `;
-    }
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
 }
 
-function search(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-input-text");
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchInput.value}&key=${apiKey}&units=metric`;
+function search(city) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
+}
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-form-input");
+
+  search(searchInput.value);
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-function forecast(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-input-text");
-  let apiurl = `https://api.shecodes.io/weather/v1/forecast?query=${searchInput.value}&key=${apiKey}&units=metric`;
+function forecast(city) {
+  let apiurl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiurl).then(showForecast);
 }
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", forecast);
 
 //getting weather for current location
 function showPosition(position) {
@@ -166,3 +161,6 @@ function navigate() {
 //unit conversion
 let celsius = document.getElementById("celsius");
 celsius.addEventListener("click", showTemperature);
+
+//display weather for Nairobi each time the page reloads
+search("Nairobi");

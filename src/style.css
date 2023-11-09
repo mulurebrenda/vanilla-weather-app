@@ -4,16 +4,15 @@
   flex-wrap: wrap;
   padding-top: 5em;
   justify-content: center;
- 
 }
 .weather-app {
   width: 85%;
   max-width: 620px;
-  min-width: 420px;
+  min-width: 450px;
   font-family: "Nunito", sans-serif;
   box-shadow: 0 10px 20px rgba(135, 134, 138, 0.2);
   border: 1px solid rgba(135, 134, 138, 0.2);
-  border-radius: 10px; height: 60%;
+  border-radius: 10px;
 }
 main {
   margin: 3%;
@@ -90,7 +89,7 @@ p.highest-lowest-temp {
 .day-5,
 .day-6,
 .day-7,
-.forecast-day{
+.forecast-day {
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(128, 128, 128, 0.4);
 }
@@ -130,8 +129,7 @@ p.highest-lowest-temp {
 .day-5,
 .day-6,
 .day-7,
-.forecast-day
-{
+.forecast-day {
   background-color: rgba(196, 195, 195, 0.02);
   flex-grow: 1;
   padding: 0.5em, 0.8em;
