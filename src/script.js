@@ -148,7 +148,7 @@ searchForm.addEventListener("submit", forecast);
 
 //getting weather for current location
 function showPosition(position) {
-  console.log(position);
+ 
 
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
