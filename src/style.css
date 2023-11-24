@@ -25,22 +25,14 @@ aside {
   border: 1px solid rgba(196, 195, 195, 0.1);
   border-radius: 6px;
   padding: 1em;
-  margin: 2em 1em 1em;
+  margin: 1em;
   float: right;
 }
 
 header {
   padding: 0.5em 0;
 }
-button.navbar-toggler {
-  border: none;
-  font-size: 1.5em;
-  
-}
-button.navbar-toggler:hover {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 1.4em;
-}
+
 #location {
   font-size: 2.2em;
   font-weight: 550;
@@ -52,6 +44,23 @@ div.time {
   text-align: center;
   line-height: 3rem;
 }
+
+button.current-location-button{
+background-color: rgb(161, 161, 161);
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1em;
+padding-left: 10px;
+padding-right: 10px;
+  
+  transition: ease-in-out 200ms all;
+}
+button.current-location-button:hover {
+  background-color: #cf8e55;
+  font-size: 1.05em;
+  padding: 6.5px 10px;
+}
 #weather-icon {
   display: block;
   margin: 0 auto;
@@ -60,6 +69,7 @@ div.time {
 div.country-date {
   padding-top: 1.8em;
   padding-left: 2em;
+  padding-right: 0.2em;
 }
 #city {
   font-size: 1.2em;
@@ -155,21 +165,6 @@ input.search-form-input {
   font-size: 1em;
 }
 
-button.current-location-button {
-  background-color: rgb(161, 161, 161);
-  border: none;
-padding-left: 10px;
-padding-right: 10px;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 1em;
-  transition: ease-in-out 200ms all;
-}
-button.current-location-button:hover {
-  background-color: #cf8e55;
-  font-size: 1.05em;
-  padding: 6.5px 10px;
-}
 div.units {
   font-size: 1.2em;
   text-align: center;
