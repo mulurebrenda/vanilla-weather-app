@@ -2,6 +2,7 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+  font-size: 0.62em;
   padding-top: 5em;
   justify-content: center;
 }
@@ -187,12 +188,6 @@ div.units {
 #farenheit:hover {
   font-size: 0.9em;
   color: blue;
-}
-
-@media screen and (max-width: 1600px) {
-  .container {
-    font-size: 0.62em;
-  }
 }
 #github-link {
   display: block;
