@@ -65,16 +65,11 @@ button.current-location-button:hover {
 }
 #weather-icon {
   display: block;
-  margin: 0 auto;
-  width: 6em;
-}
-div.country-date {
-  padding-top: 1.8em;
-  padding-left: 2em;
-  padding-right: 0.2em;
+  width: 8em;
 }
 #city {
-  font-size: 1.2em;
+  padding-left: 0.2em;
+  font-size: 0.95em;
   font-weight: 500;
 }
 #date {

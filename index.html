@@ -23,11 +23,11 @@
       <div class="weather-app">
         <header>
           <div class="row">
-            <div class="col-4 time" id="time"></div>
-            <div class="col-4 location">
-              <h1 id="location">Nairobi</h1>
+            <div class="col-5 location">
+              <h1 class="text-start ps-4" id="location">Nairobi</h1>
             </div>
-            <div class="col-4"></div>
+            <div class="col-2 time" id="time"></div>
+            <div class="col-4 text-end m-auto" id="date"></div>
           </div>
         </header>
         <aside>
@@ -88,31 +88,29 @@
           </div>
         </aside>
         <main>
-          <div class="row">
-            <div class="col-4 current-weather">
-              <p id="icon">
-                <img
-                  id="weather-icon"
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
-                  alt="Weather Icon"
-                  width="65px"
-                />
+          <div>
+            <div class="icon-city d-flex">
+              <img
+                id="weather-icon"
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+                alt="Weather Icon"
+                class="img-fluid"
+              />
+              <div class="city-country m-auto d-none d-md-flex" id="city">
+                Nairobi, Kenya
+              </div>
+            </div>
+            <div>
+              <h2 class="degree" id="current-temperature">23°</h2>
+              <p class="highest-lowest-temp">
+                <span id="highest-temp">25°</span> |
+                <span id="lowest-temp">14°</span>
+
+                <br />
+                <span id="weather-description"> Light Rain </span>
               </p>
             </div>
-            <div class="col-8 country-date">
-              <span id="city">Nairobi, Kenya</span>
-              <br />
-              <span id="date"></span>
-            </div>
           </div>
-          <h2 class="degree" id="current-temperature">23°</h2>
-          <p class="highest-lowest-temp">
-            <span id="highest-temp">25°</span> |
-            <span id="lowest-temp">14°</span>
-
-            <br />
-            <span id="weather-description"> Light Rain </span>
-          </p>
         </main>
         <div class="upcoming-weather" id="forecast">
           <div class="day-1">
