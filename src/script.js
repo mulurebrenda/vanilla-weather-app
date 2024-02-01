@@ -33,6 +33,7 @@ let apiKey = "05fo015e85414d77adb5a43ddt2314b8";
 
 //current weather
 function showTemperature(response) {
+  console.log(response);
   //rounding off the temperature
   let temperature = Math.round(response.data.temperature.current);
 
@@ -126,12 +127,14 @@ function showForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
 }
-
+function searchCity(city) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+axios.get(apiUrl).then(showTemperature);
+}
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input-text");
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchInput.value}&key=${apiKey}&units=metric`;
-axios.get(apiUrl).then(showTemperature);
+  searchCity(searchInput.value);
 }
 
 let form = document.querySelector("#search-form");
@@ -148,8 +151,7 @@ searchForm.addEventListener("submit", forecast);
 
 //getting weather for current location
 function showPosition(position) {
- 
-
+ console.log(position);
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let forecastUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${lat}&lon=${lon}&units=metric&key=${apiKey}`;
@@ -161,4 +163,5 @@ function navigate() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 //show weather for current location when page reloads
-navigate();
+//navigate();
+searchCity("Kisumu");
