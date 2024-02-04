@@ -11,8 +11,9 @@
   max-width: 620px;
   min-width: 386px;
   font-family: "Nunito", sans-serif;
-  box-shadow: 0 10px 20px rgba(135, 134, 138, 0.2);
-  border: 1px solid rgba(135, 134, 138, 0.2);
+  background-color: rgba(196, 195, 195, 0.1);
+  box-shadow: 0 2px 5px rgba(232, 232, 233, 0.2);
+  border: 1px solid rgba(232, 232, 233, 0.6);
   border-radius: 10px;
 }
 main {
@@ -98,7 +99,7 @@ p.highest-lowest-temp {
 .day-6,
 .forecast-day {
   border-radius: 4px;
-  box-shadow: 0 0 5px rgba(128, 128, 128, 0.4);
+  box-shadow: 0 0 2px rgba(128, 128, 128, 0.18);
 }
 .conditions {
   background: #ffffff;
@@ -136,7 +137,6 @@ p.highest-lowest-temp {
 .day-5,
 .day-6,
 .forecast-day {
-  background-color: rgba(196, 195, 195, 0.02);
   flex-grow: 1;
   padding: 0.5em, 0.8em;
   margin: 0 0.5em 0.5em;
